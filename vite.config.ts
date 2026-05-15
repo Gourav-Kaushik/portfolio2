@@ -7,11 +7,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          'three': ['three', 'three-stdlib'],
-          'react-three': ['@react-three/fiber', '@react-three/drei'],
-          'gsap': ['gsap'],
-          'vendor': ['react', 'react-dom', 'react-router-dom']
+        manualChunks(id: string) {
+          if (id.includes('three-stdlib') || id.includes('three')) return 'three'
+          if (id.includes('@react-three/fiber') || id.includes('@react-three/drei')) return 'react-three'
+          if (id.includes('gsap')) return 'gsap'
+          if (id.includes('react-dom') || id.includes('react') || id.includes('react-router-dom')) return 'vendor'
         }
       }
     },
