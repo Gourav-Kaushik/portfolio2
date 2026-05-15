@@ -6,13 +6,29 @@
 /* Remove mobile photo and ensure 3D character is always hidden on mobile */
 @media only screen and (max-width: 768px) {
   .character-model {
-    display: none !important;
+    display: block !important;
+    position: relative !important;
+    height: 50vh !important;
+    width: 100% !important;
+    left: 0 !important;
+    transform: none !important;
+    order: 2; /* Position it between name and titles */
+    margin-top: -20px;
+    margin-bottom: 20px;
+    z-index: 1;
+    bottom: auto !important;
+  }
+
+  /* Fade effect for character model bottom on mobile */
+  .character-model::after {
+    height: 100px !important;
+    bottom: 0 !important;
   }
 
   .landing-section,
   .landing-container {
     height: auto !important;
-    min-height: 100vh;
+    min-height: auto; /* Remove 100vh to tighten the gap */
     max-width: 100vw;
     box-sizing: border-box;
     display: flex;
@@ -70,7 +86,7 @@
     /* Space between name and subtitles */
     z-index: 10;
     background: transparent;
-    padding-bottom: 50px;
+    padding-bottom: 20px; /* Reduced from 50px */
     /* Add bottom padding for scroll space */
     display: flex;
     flex-direction: column;
@@ -96,7 +112,8 @@
   .landing-h2-info {
     position: static !important;
     display: block;
-    width: auto;
+    width: 100% !important; /* Force full width on mobile to prevent overflow */
+    max-width: 100vw;
     margin: 0 !important;
     font-size: 20px !important;
     line-height: 1.5 !important;
@@ -406,18 +423,6 @@ h2.landing-info-h2 {
   white-space: nowrap;
 }
 
-.landing-info-h2::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 120%;
-  z-index: 3;
-  background-image: linear-gradient(0deg,
-      var(--backgroundColor) 40%,
-      rgba(0, 0, 0, 0) 110%);
-  top: 0;
-  left: 0;
-}
 
 @media screen and (min-width: 500px) {
   .landing-circle2 {

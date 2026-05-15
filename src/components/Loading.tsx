@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/Loading.css";
 import { useLoading } from "../context/LoadingProvider";
 
@@ -9,6 +9,9 @@ const Loading = ({ percent }: { percent: number }) => {
   const [loaded, setLoaded] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
+
+  // Handle Marquee component interop
+  const MarqueeComponent = (Marquee as any).default || Marquee;
 
   if (percent >= 100) {
     setTimeout(() => {
@@ -61,10 +64,10 @@ const Loading = ({ percent }: { percent: number }) => {
       </div>
       <div className="loading-screen">
         <div className="loading-marquee">
-          <Marquee>
+          <MarqueeComponent>
             <span>&nbsp; AI Engineer &nbsp;</span> <span>&nbsp; Full Stack Developer &nbsp;</span>
             <span>&nbsp; AI Engineer &nbsp;</span> <span>&nbsp; Full Stack Developer &nbsp;</span>
-          </Marquee>
+          </MarqueeComponent>
         </div>
         <div
           className={`loading-wrap ${clicked && "loading-clicked"}`}

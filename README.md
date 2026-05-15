@@ -1,16 +1,26 @@
-# My Portfolio Wesbite by @red1-for-hek - Overview 🚀
-Here is my 3d portfolio website. I am a developer/programmer/coder. You can use it as portfolio template.
-this contain AI, Machine Learning, Advance chess playing model too. Made by Python, HTML, CSS, JS, TS, React etc.
-If you are copying this code or forking this repo, please give a credit of my name :(
+# Portfolio Website
 
-## Instructions 🛠️
+Personal portfolio website built with React, TypeScript, and Vite.
 
-Go to www.redoyanulhaque.me/ and rate it :)
+## Tech Stack
 
-**Techstack** - React, TypeScript, GSAP, ThreeJS, WebGL, HTML, Css, JavaScript
+- **React** + **TypeScript**
+- **Vite** (build tool)
+- **GSAP** (animations)
+- **Three.js / @react-three/fiber** (3D visuals)
+- **React Router** (navigation)
+- **Lenis** (smooth scrolling)
 
-- [Protfolio-Preview](https://www.redoyanulhaque.me/)
+## Features
 
-## License
+- Interactive 3D character model
+- Horizontal scrolling work section
+- Responsive design
+- Smooth scroll animations
 
-This project is open source and available under the [MIT License](LICENSE).
+## Getting Started
+
+```bash
+npm install
+npm run dev
+```

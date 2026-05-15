@@ -16,11 +16,7 @@ interface LoadingType {
 export const LoadingContext = createContext<LoadingType | null>(null);
 
 export const LoadingProvider = ({ children }: PropsWithChildren) => {
-  const [isLoading, setIsLoading] = useState(() => {
-    // Skip loading on mobile
-    if (window.innerWidth <= 768) return false;
-    return true;
-  });
+  const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(0);
 
   const value = {

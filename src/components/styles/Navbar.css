@@ -2,7 +2,7 @@
   display: flex;
   max-width: var(--cMaxWidth);
   width: var(--cWidth);
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 15px 0px;
   margin-bottom: -80px;
   box-sizing: border-box;
