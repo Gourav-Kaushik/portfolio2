@@ -21,9 +21,11 @@ const Landing = ({ children }: PropsWithChildren) => {
             </h1>
           </div>
           <div className="landing-info">
-            <h3>An</h3>
+            <h3 style={{ paddingLeft: "0.9em" }}>An</h3>
             <h2 className="landing-info-h2">
-              <div className="landing-h2-1">AI Engineer</div>
+              <div className="landing-h2-1" style={{ alignSelf: "flex-start", paddingLeft: "0.3em" }}>AI Engineer</div>
+              <div className="landing-h2-1">&amp;</div>
+              <div className="landing-h2-1" style={{ alignSelf: "flex-start" }}>Data Scientist</div>
             </h2>
           </div>
 
