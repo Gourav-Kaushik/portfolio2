@@ -239,3 +239,10 @@
     margin-top: 3px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .techstack-new {
+    padding: 40px 0;
+    min-height: auto;
+  }
+}
